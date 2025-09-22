@@ -1,6 +1,5 @@
-
 body {
- min-height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
@@ -62,11 +61,10 @@ body {
 }
 
 .gradient-background {
-  background: linear-gradient(300deg,#14041d,#271433,#0b1529);
+  background: linear-gradient(300deg, #14041d, #271433, #0b1529);
   background-size: 180% 180%;
   animation: gradient-animation 9s ease infinite;
 }
-
 
 @keyframes gradient-animation {
   0% {
@@ -86,10 +84,11 @@ body {
   padding-top: 100px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #ffffff;
-
-}           
+}
 p {
   margin: 0 0 10px;
   color: #ffffff;
@@ -165,5 +164,3 @@ p {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 1rem;
 }
-
-
