@@ -8,24 +8,20 @@ body {
   margin: 0;
 }
 
-/* Navbar */
+/* Navigation bar */
 .navbar {
   margin: 100 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 5rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffffff;
+.logo img {
+  height: 60px;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -35,12 +31,13 @@ body {
 .nav-links a {
   text-decoration: none;
   color: #e0e0e0;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 600;
   position: relative;
   transition: color 0.3s ease;
 }
 
-/* Hover underline effect */
+/* Hover button effect */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -48,12 +45,13 @@ body {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background: #B13BFF;
+  background: #b13bff;
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #B13BFF;
+  color: #b13bff;
+
 }
 
 .nav-links a:hover::after {
@@ -77,22 +75,8 @@ body {
     background-position: 0% 50%;
   }
 }
-.header_content {
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 20px;
-  padding-top: 100px;
-}
 
-h1,
-h2,
-h3 {
-  color: #ffffff;
-}
-p {
-  margin: 0 0 10px;
-  color: #ffffff;
-}
+/* Footer styles */
 .footer {
   margin-top: 3rem;
   padding: 2rem 1rem;
@@ -163,4 +147,33 @@ p {
   color: var(--color-muted);
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 1rem;
+}
+/* Header styles */
+.header_content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.692) 30%, rgba(0,0,0,0) 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+.header_content {
+  position: relative;
+  background: url('/images/Headerimg.webp') center/cover no-repeat;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 300px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  padding-top: 100px;
+}
+.header_content > * {
+  position: relative;
+  z-index: 2;
 }
