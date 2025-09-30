@@ -145,6 +145,42 @@ body {
   width: 150px;
 }
 
+/* Store info section */
+.storeinfo-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 10rem 10rem 5rem;
+}
+
+.storeinfo {
+  flex: 1 1 300px;
+}
+
+.storeinfo h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color:#FFCC00;
+}
+
+.storeinfo p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.storeinfo-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.storeinfo-image img {
+  max-width: 80%;
+  border-radius: 10px;
+  border: #FFCC00 1px solid;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.349);
+}
+
 /* Footer styles */
 .footer {
   margin-top: 3rem;
@@ -232,7 +268,7 @@ body {
 }
 .header_content {
   position: relative;
-  background: url('/images/Headerimg.webp') center/cover no-repeat;
+  background: url('/images/friendsgaming.webp') center/cover no-repeat;
   height: 700px;
   display: flex;
   flex-direction: column;
