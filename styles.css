@@ -22,7 +22,7 @@ body {
 .logo img {
   height: 60px;
   cursor: pointer;
-filter: drop-shadow(0 0px 10px #b700ff);
+  filter: drop-shadow(0 0px 10px #b700ff);
 }
 .nav-links {
   list-style: none;
@@ -397,8 +397,6 @@ filter: drop-shadow(0 0px 10px #b700ff);
   padding-top: 1rem;
 }
 
-
-
 /**Header content CONTACT PAGE**/
 .contact_header_content::before {
   content: "";
@@ -428,8 +426,8 @@ filter: drop-shadow(0 0px 10px #b700ff);
   margin-bottom: 20px;
   padding-top: 100px;
 }
-.contact_header_content h1{
- color: #ffcc00;
+.contact_header_content h1 {
+  color: #ffcc00;
 }
 .contact_header_content > * {
   position: relative;
@@ -487,7 +485,7 @@ filter: drop-shadow(0 0px 10px #b700ff);
   margin: 6rem auto 10rem auto;
   background: rgba(30, 10, 60, 0.85);
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
   padding: 2.5rem 2rem 2rem 2rem;
   color: #fff;
   text-align: center;
@@ -520,7 +518,7 @@ filter: drop-shadow(0 0px 10px #b700ff);
   padding: 0.75rem 1rem;
   border: 1.5px solid #b13bff;
   border-radius: 8px;
-  background: rgba(255,255,255,0.07);
+  background: rgba(255, 255, 255, 0.07);
   color: #fff;
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
@@ -544,9 +542,10 @@ filter: drop-shadow(0 0px 10px #b700ff);
   padding: 0.7em 2.2em;
   border: none;
   border-radius: 32px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   cursor: pointer;
-  transition: background-position 0.6s cubic-bezier(.4,0,.2,1), transform 0.2s, box-shadow 0.2s;
+  transition: background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.2s, box-shadow 0.2s;
   background-size: 200% 100%;
   background-position: left;
   letter-spacing: 1px;
@@ -556,5 +555,5 @@ filter: drop-shadow(0 0px 10px #b700ff);
 .contact-form button[type="submit"]:hover {
   background-position: right;
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
 }
