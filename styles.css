@@ -113,10 +113,14 @@ body {
 
 /* Main content styles */
 .infoicons {
-  display: flex;
+ display: flex;
   justify-content: center;
-  gap: 20rem;
-  margin: 3rem 0rem;
+  gap: 15rem;           /* Much smaller gap */
+  margin: 3rem 0;
+  max-width: 1500px;   /* Prevents overflow on large screens */
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap; 
 }
 
 .service {
@@ -152,7 +156,8 @@ body {
   align-items: center;
   gap: 10rem;
   max-width: 1500px;
-  margin: 2rem auto;
+  margin: 10rem auto;
+
 }
 
 .storeinfo {
@@ -191,7 +196,7 @@ body {
 
 /* Locations styles */
 .gamingcenters {
-  margin: 5rem auto 2rem auto;
+  margin: 5rem auto 10rem auto;
   max-width: 1100px;
   text-align: center;
   color: #fff;
