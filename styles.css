@@ -22,6 +22,7 @@ body {
 .logo img {
   height: 60px;
   cursor: pointer;
+filter: drop-shadow(0 0px 10px #b700ff);
 }
 .nav-links {
   list-style: none;
@@ -52,7 +53,6 @@ body {
 
 .nav-links a:hover {
   color: #b13bff;
-
 }
 
 .nav-links a:hover::after {
@@ -77,6 +77,53 @@ body {
   }
 }
 /* Header content styles */
+/* Header styles */
+.header_content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.692) 30%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+.header_content {
+  position: relative;
+  background: url("/images/friendsgaming.webp") center/cover no-repeat;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 300px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  padding-top: 100px;
+}
+.header_content > * {
+  position: relative;
+  z-index: 2;
+}
+.header_content h1,
+.header_content button,
+.header_content p {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 2s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .header_content h1 {
   font-size: 4rem;
   margin: 0 0 1rem 0;
@@ -85,7 +132,7 @@ body {
 }
 
 .highlight {
-  color: #FFCC00;
+  color: #ffcc00;
 }
 .header_content button {
   background: linear-gradient(90deg, #4e50cf 0%, #b13bff 100%);
@@ -100,7 +147,8 @@ body {
   border-radius: 32px;
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.377);
   cursor: pointer;
-  transition: background-position 0.6s cubic-bezier(.4,0,.2,1), transform 0.5s, box-shadow 0.5s;
+  transition: background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.5s, box-shadow 0.5s;
   margin-top: 1.5rem;
   letter-spacing: 1px;
 }
@@ -108,31 +156,31 @@ body {
 .header_content button:hover {
   background-position: right;
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
 }
 
 /* Main content styles */
 .infoicons {
- display: flex;
+  display: flex;
   justify-content: center;
-  gap: 15rem;           /* Much smaller gap */
+  gap: 15rem; /* Much smaller gap */
   margin: 3rem 0;
-  max-width: 1500px;   /* Prevents overflow on large screens */
+  max-width: 1500px; /* Prevents overflow on large screens */
   margin-left: auto;
   margin-right: auto;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .service {
   display: flex;
   flex-direction: column;
-  align-items:center
+  align-items: center;
 }
 
 .service h2 {
   margin-bottom: 1rem;
   font-size: 3rem;
-  color: #FFCC00;
+  color: #ffcc00;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -157,23 +205,22 @@ body {
   gap: 10rem;
   max-width: 1500px;
   margin: 10rem auto;
-
 }
 
 .storeinfo {
- flex: 1 1 700px;
+  flex: 1 1 700px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   height: 100%;
-  padding: 0;  
+  padding: 0;
 }
 
 .storeinfo h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color:#FFCC00;
+  color: #ffcc00;
 }
 
 .storeinfo p {
@@ -190,7 +237,7 @@ body {
 .storeinfo-image img {
   max-width: 80%;
   border-radius: 10px;
-  border: #FFCC00 1px solid;
+  border: #ffcc00 1px solid;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.349);
 }
 
@@ -228,7 +275,7 @@ body {
   border-radius: 18px;
   padding: 2rem 2.5rem;
   min-width: 180px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,7 +307,7 @@ body {
   border-radius: 18px;
   padding: 2rem 2.5rem;
   min-width: 180px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -272,7 +319,7 @@ body {
 .center-link:focus .center-block {
   transform: scale(1.06);
   border: 2px solid #ffd600;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
   transition: transform 0.5s, box-shadow 0.5s, border 0.5s;
 }
 
@@ -349,21 +396,28 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 1rem;
 }
-/* Header styles */
-.header_content::before {
+
+
+
+/**Header content CONTACT PAGE**/
+.contact_header_content::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.692) 30%, rgba(0,0,0,0) 60%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.692) 30%,
+    rgba(0, 0, 0, 0) 60%
+  );
   z-index: 1;
   pointer-events: none;
 }
-.header_content {
+.contact_header_content {
   position: relative;
-  background: url('/images/friendsgaming.webp') center/cover no-repeat;
+  background: url("/images/Cafe.webp") center/cover no-repeat;
   height: 700px;
   display: flex;
   flex-direction: column;
@@ -374,19 +428,133 @@ body {
   margin-bottom: 20px;
   padding-top: 100px;
 }
-.header_content > * {
+.contact_header_content h1{
+ color: #ffcc00;
+}
+.contact_header_content > * {
   position: relative;
   z-index: 2;
 }
-.header_content h1, .header_content button, .header_content p {
-    opacity: 0;
-    transform: translateX(-50px); 
-    animation: slideIn 2s ease forwards;
-  }
+.contact_header_content h1,
+.contact_header_content button,
+.contact_header_content p {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 2s ease forwards;
+}
 
-  @keyframes slideIn {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
+.contact_header_content h1 {
+  font-size: 4rem;
+  margin: 0 0 1rem 0;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.contact_header_content button {
+  background: linear-gradient(90deg, #4e50cf 0%, #b13bff 100%);
+  background-size: 200% 100%;
+  background-position: left;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.75em 2em;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.377);
+  cursor: pointer;
+  transition: background-position 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.5s, box-shadow 0.5s;
+  margin-top: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.contact_header_content button:hover {
+  background-position: right;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+/* Contact form styles */
+.contact-section {
+  max-width: 500px;
+  margin: 6rem auto 10rem auto;
+  background: rgba(30, 10, 60, 0.85);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+  padding: 2.5rem 2rem 2rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #ffd600;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ffd600;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #b13bff;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  transition: border 0.3s, box-shadow 0.3s;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form textarea:focus {
+  border: 1.5px solid #ffd600;
+  box-shadow: 0 0 8px #b13bff44;
+}
+
+.contact-form button[type="submit"] {
+  background: linear-gradient(90deg, #4e50cf 0%, #b13bff 100%);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.7em 2.2em;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  cursor: pointer;
+  transition: background-position 0.6s cubic-bezier(.4,0,.2,1), transform 0.2s, box-shadow 0.2s;
+  background-size: 200% 100%;
+  background-position: left;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-position: right;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
