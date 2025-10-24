@@ -20,7 +20,7 @@ body {
   background: #1e0a3cd9;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
   border-bottom: 1.5px solid #b13bff44;
   z-index: 1000;
 }
@@ -74,10 +74,10 @@ body {
   background: rgba(30, 10, 60, 0.97);
   border-radius: 10px;
   min-width: 180px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   z-index: 100;
   padding: 0.5rem 0;
-    list-style: none;
+  list-style: none;
   padding-left: 0;
   margin: 0;
 }
@@ -195,10 +195,13 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   letter-spacing: 1px;
-  box-shadow: 0 10px 16px rgba(0,0,0,0.38);
-  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.38);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 14px 20px rgba(0,0,0,0.45); }
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.45);
+}
 
 /* Main content styles */
 .infoicons {
@@ -366,7 +369,7 @@ body {
   margin-bottom: -1rem;
   margin-top: -0.7rem;
   letter-spacing: 1px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   top: -6px;
 }
@@ -382,7 +385,7 @@ body {
 /* Footer styles */
 .footer {
   margin-top: 5rem;
-  
+
   padding: 2rem 3rem;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
@@ -697,7 +700,7 @@ body {
   font-size: 1.1rem;
   font-weight: 500;
   position: relative;
-color: #ffd600;
+  color: #ffd600;
 }
 .additional_info a:hover {
   font-weight: 800;
@@ -785,7 +788,7 @@ color: #ffd600;
   height: 420px;
   border: none;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   object-fit: cover;
 }
 .stockholm_location_info h2 {
