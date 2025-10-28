@@ -44,6 +44,9 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0; /* remove browser default gap above/below UL */
+  padding: 0;
+  /* vertically center items inside navbar */
 }
 
 .nav-links a {
@@ -255,8 +258,6 @@ body {
   flex: 1 1 700px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   height: 100%;
   padding: 0;
 }
@@ -991,4 +992,296 @@ body {
   font-size: 1.2rem;
   max-width: 700px;
   line-height: 1.5;
+}
+
+/* Navbar mobile responsiveness */
+.navbar-container {
+  position: relative;
+}
+
+/* Hide the checkbox visually (label toggles it) */
+.nav-toggle-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Hamburger button (hidden on desktop) */
+.nav-toggle {
+  position: absolute;
+  right: 5rem; /* increase this number to move the icon further right */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1100;
+  display: flex;
+  cursor: pointer;
+}
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  width: 25px;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  display: block;
+  position: relative;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.nav-toggle .hamburger::before {
+  top: -7px;
+}
+.nav-toggle .hamburger::after {
+  top: 7px;
+}
+
+/* Animate hamburger to X */
+#nav-toggle:checked + .nav-toggle .hamburger {
+  transform: rotate(45deg);
+}
+#nav-toggle:checked + .nav-toggle .hamburger::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+#nav-toggle:checked + .nav-toggle .hamburger::after {
+  opacity: 0;
+}
+
+/* Desktop dropdown (details/summary) */
+.nav-links .dropdown details {
+  position: relative;
+}
+.nav-links .dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+}
+.nav-links .dropdown summary::-webkit-details-marker {
+  display: none;
+}
+.nav-links .dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  padding: 0.5rem 0;
+  background: rgba(30, 10, 60, 0.97);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  display: none;
+}
+/* show on open or hover (desktop) */
+.nav-links .dropdown details[open] .dropdown-menu {
+  display: block;
+}
+@media (hover: hover) {
+  .nav-links .dropdown details:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Mobile: hamburger shows a vertical panel; dropdown collapses inline */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  /* Show panel when toggled */
+  #nav-toggle:checked ~ nav .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(30, 10, 60, 0.98);
+    padding: 0.75rem 1rem;
+    gap: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    z-index: 1001;
+  }
+
+  .nav-links a,
+  .nav-links summary {
+    display: block;
+    padding: 0.9rem 0.5rem;
+    font-size: 1.15rem;
+    color: #e0e0e0;
+  }
+
+  /* Mobile dropdown: static block list */
+  .nav-links .dropdown .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    padding: 0.25rem 0 0.5rem 1rem;
+    display: none;
+  }
+  .nav-links .dropdown details[open] .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Ensure the details/summary (Gaming centers) matches link styles */
+.nav-links .dropdown summary {
+  color: #e0e0e0; /* same color as .nav-links a */
+  font-size: 1.5rem; /* desktop size */
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+/* hide default marker */
+.nav-links .dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Mobile: match mobile nav sizing */
+@media (max-width: 900px) {
+  .nav-links .dropdown summary {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    font-weight: 600;
+  }
+  /* keep the submenu links styled */
+  .nav-links .dropdown .dropdown-menu a {
+    color: #ffd600;
+    font-size: 1rem;
+  }
+}
+
+/* ...existing code... */
+
+/* Make "Gaming centers" (details > summary) line up with other nav links */
+.nav-links a,
+.nav-links summary {
+  display: inline-flex;
+  align-items: center;
+  height: 20px; /* match logo / navbar height */
+}
+
+/* Ensure summary/ details behave like a link */
+.nav-links .dropdown details {
+  display: inline-block;
+}
+.nav-links .dropdown summary {
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  color: #e0e0e0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding-left: 0.5rem; /* optional tweak if you want extra left spacing */
+}
+
+/* Add a caret indicator and rotate when open */
+.nav-links .dropdown summary::after {
+  content: "▾";
+  font-size: 2rem;
+  transform: rotate(180deg);
+  transition: transform 0.18s ease;
+  color: #e0e0e0;
+}
+
+.nav-links .dropdown details[open] summary::after {
+  transform: rotate(0deg);
+}
+
+/* Mobile: make summary full-width, caret to right and natural height */
+@media (max-width: 900px) {
+  .nav-links a,
+  .nav-links summary {
+    height: auto;
+    padding: 0.9rem 0.5rem;
+    font-size: 1.15rem;
+  }
+  .nav-links .dropdown summary {
+    width: 100%;
+    justify-content: space-between; /* label left, caret right */
+    padding-right: 0.5rem;
+  }
+  .nav-links .dropdown details {
+    display: inline-block;
+  }
+  .nav-links .dropdown summary {
+    gap: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 901px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav-links {
+    margin-left: auto;
+  }
+}
+
+.nav-links .dropdown summary {
+  line-height: 1;
+}
+
+@media (max-width: 1024px) {
+  .header_content {
+    padding-left: 35px;
+  }
+
+  .storeinfo-section {
+    flex-direction: column; /* reduce outer margin on small screens */
+    align-items: center; /* center children */
+  }
+
+  .storeinfo {
+    order: 1;
+    text-align: center; /* optional: center text on small screens */
+    width: 100%;
+  }
+
+  .storeinfo-image {
+    order: 2;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .storeinfo-image img {
+    max-width: 90%; /* keep some horizontal padding on narrow screens */
+  }
+
+  .storeinfo-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 5.5rem 2rem; /* much smaller on phones/tablets */
+    gap: 3rem;
+    padding: 0;
+    max-height: 500px;
+  }
+
+  .storeinfo p {
+    font-size: 1.2rem;
+  }
+}
+
+/* temp debug: outline immediate page sections so you can see which element creates the gap */
+body > {
+  outline: 2px dashed rgba(255, 255, 255, 0.06);
 }

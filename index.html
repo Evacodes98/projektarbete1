@@ -17,17 +17,26 @@
 <header class="navbar">
   <div class="navbar-container">
     <div class="logo">
-  <a href="index.html"><img src="images/Logotext4.svg" alt="Logo"></a>
+      <a href="index.html"><img src="images/Logotext4.svg" alt="Logo"></a>
     </div>
+
+    <!-- CSS-only hamburger -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
+    <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <span class="hamburger"></span>
+    </label>
+
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="#">Gaming centers</a>
-          <ul class="dropdown-menu">
-            <li><a href="/stockholm.html">Stockholm</a></li>
-            <li><a href="/gothenburg.html">Gothenburg</a></li>
-            <li><a href="/malmo.html">Malmö</a></li>
-          </ul>
+          <details>
+            <summary>Gaming centers</summary>
+            <ul class="dropdown-menu">
+              <li><a href="/stockholm.html">Stockholm</a></li>
+              <li><a href="/gothenburg.html">Gothenburg</a></li>
+              <li><a href="/malmo.html">Malmö</a></li>
+            </ul>
+          </details>
         </li>
         <li><a href="/about.html">About</a></li>
         <li><a href="/contact.html">Contact</a></li>
