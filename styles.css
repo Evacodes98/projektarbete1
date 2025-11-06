@@ -44,9 +44,8 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin: 0; /* remove browser default gap above/below UL */
+  margin: 0;
   padding: 0;
-  /* vertically center items inside navbar */
 }
 
 .nav-links a {
@@ -127,7 +126,7 @@ body {
   }
 }
 
-/* Header styles */
+/* main Header styles */
 .header_content::before {
   content: "";
   position: absolute;
@@ -177,11 +176,13 @@ body {
   margin: 0 0 1rem 0;
   font-weight: 900;
   font-style: italic;
+  text-shadow: rgba(0, 0, 0, 0.452) 3px 3px 0px;
 }
 .header_content p {
   font-size: 1.2rem;
   max-width: 700px;
   line-height: 1.5;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
 }
 
 .highlight {
@@ -192,6 +193,7 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 1.2rem;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
   background: linear-gradient(90deg, #4e50cf 0%, #b13bff 100%);
   padding: 0.75em 2em;
   border-radius: 32px;
@@ -230,6 +232,7 @@ body {
   color: #ffcc00;
   font-weight: 700;
   letter-spacing: 1px;
+  text-shadow: rgba(0, 0, 0, 0.452) 3px 2px 0px;
 }
 
 .service p {
@@ -238,13 +241,14 @@ body {
   color: #e0e0e0;
   font-size: 1rem;
   line-height: 1.4;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
 }
 
 .service img {
   width: 150px;
 }
 
-/* Store info section */
+/* Store information section */
 .storeinfo-section {
   display: flex;
   justify-content: center;
@@ -266,12 +270,14 @@ body {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: #ffcc00;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
 }
 
 .storeinfo p {
   font-size: 1rem;
   line-height: 1.6;
   color: #ffffff;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
 }
 
 .storeinfo-image {
@@ -286,7 +292,7 @@ body {
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.349);
 }
 
-/* Locations styles */
+/* Index: Gaming center Locations styles */
 .gamingcenters {
   margin: 5rem auto 10rem auto;
   max-width: 1100px;
@@ -300,12 +306,14 @@ body {
   margin-bottom: 0.5rem;
   color: #ffd600;
   letter-spacing: 1px;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
 }
 
 .gamingcenters p {
   margin-bottom: 3.5rem;
   font-size: 1.1rem;
   color: #e0e0e0;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
 }
 
 .center-list-row {
@@ -332,12 +340,14 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 1px;
+  text-shadow: rgba(0, 0, 0, 0.452) 3px 2px 0px;
 }
 
 .center-block p {
   margin: 0;
   color: #fff;
   font-size: 1.05rem;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
 }
 
 .center-link {
@@ -433,7 +443,7 @@ body {
   padding-top: 1rem;
 }
 
-/**Contact page - header**/
+/*Contact: header*/
 .contact_header_content::before {
   content: "";
   position: absolute;
@@ -475,6 +485,7 @@ body {
   opacity: 0;
   transform: translateX(-50px);
   animation: slideIn 2s ease forwards;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
 }
 
 @keyframes slideIn {
@@ -592,7 +603,7 @@ body {
   border: 1.5px solid #ffd600;
 }
 
-/* About page - header styles */
+/* About page: header styles */
 .about_header_content::before {
   content: "";
   position: absolute;
@@ -634,6 +645,7 @@ body {
   opacity: 0;
   transform: translateX(-50px);
   animation: slideIn 2s ease forwards;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
 }
 .about_header_content p {
   font-size: 1.2rem;
@@ -653,7 +665,7 @@ body {
   font-style: italic;
 }
 
-/* About page - FAQ styles */
+/* About page: FAQ styles */
 .faq_info {
   max-width: 900px;
   width: 70%;
@@ -663,6 +675,7 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
   padding: 2.5rem 2rem 2rem 2rem;
   color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.452) 3px 2px 0px;
 }
 
 .faq_info h2 {
@@ -687,6 +700,7 @@ body {
   color: #e0e0e0;
 }
 .additional_info {
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
   max-width: 1000px;
   width: 70%;
   margin: 0 auto 5rem auto;
@@ -708,7 +722,7 @@ body {
   transition: font-weight 0.3s ease;
 }
 
-/* Stockholm page - information styles */
+/* Stockholm page: information styles */
 .stockholm_contact_header_content::before {
   content: "";
   position: absolute;
@@ -769,13 +783,11 @@ body {
   box-sizing: border-box;
 }
 
-/* left column */
 .stockholm_location_info .location-text {
   flex: 0 0 40%;
   justify-content: flex-start;
 }
 
-/* right column - push to the right */
 .stockholm_location_info .location-map {
   margin-left: auto;
   display: flex;
@@ -888,7 +900,6 @@ body {
   border-radius: 18px;
   padding: 2rem 3rem;
   min-width: 300px;
-
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
@@ -911,7 +922,7 @@ body {
   z-index: 1;
   pointer-events: none;
 }
-
+/* Gothenburg page: information styles */
 .gothenburg_contact_header_content {
   position: relative;
   background: url("/images/Gothenburgimg.webp") center/cover no-repeat;
@@ -944,7 +955,7 @@ body {
   max-width: 700px;
   line-height: 1.5;
 }
-
+/* Malmo page: information styles */
 .malmo_contact_header_content::before {
   content: "";
   position: absolute;
@@ -994,12 +1005,12 @@ body {
   line-height: 1.5;
 }
 
-/* Navbar mobile responsiveness */
+/* NAVIGATION BAR STYLES */
 .navbar-container {
   position: relative;
 }
 
-/* Hide the checkbox visually (label toggles it) */
+/* Checkbox hidden offscreen */
 .nav-toggle-checkbox {
   position: absolute;
   left: -9999px;
@@ -1008,7 +1019,7 @@ body {
 /* Hamburger button (hidden on desktop) */
 .nav-toggle {
   position: absolute;
-  right: 5rem; /* increase this number to move the icon further right */
+  right: 5rem;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1100;
@@ -1051,7 +1062,6 @@ body {
   opacity: 0;
 }
 
-/* Desktop dropdown (details/summary) */
 .nav-links .dropdown details {
   position: relative;
 }
@@ -1076,7 +1086,7 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   display: none;
 }
-/* show on open or hover (desktop) */
+
 .nav-links .dropdown details[open] .dropdown-menu {
   display: block;
 }
@@ -1086,8 +1096,7 @@ body {
   }
 }
 
-/* Mobile: hamburger shows a vertical panel; dropdown collapses inline */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .nav-toggle {
     display: flex;
   }
@@ -1120,7 +1129,6 @@ body {
     color: #e0e0e0;
   }
 
-  /* Mobile dropdown: static block list */
   .nav-links .dropdown .dropdown-menu {
     position: static;
     box-shadow: none;
@@ -1133,46 +1141,26 @@ body {
   }
 }
 
-/* Ensure the details/summary (Gaming centers) matches link styles */
 .nav-links .dropdown summary {
-  color: #e0e0e0; /* same color as .nav-links a */
-  font-size: 1.5rem; /* desktop size */
+  color: #e0e0e0;
+  font-size: 1.5rem;
   font-weight: 600;
   cursor: pointer;
   padding: 0;
   line-height: 1;
 }
 
-/* hide default marker */
 .nav-links .dropdown summary::-webkit-details-marker {
   display: none;
 }
 
-/* Mobile: match mobile nav sizing */
-@media (max-width: 900px) {
-  .nav-links .dropdown summary {
-    font-size: 1.15rem;
-    color: #e0e0e0;
-    font-weight: 600;
-  }
-  /* keep the submenu links styled */
-  .nav-links .dropdown .dropdown-menu a {
-    color: #ffd600;
-    font-size: 1rem;
-  }
-}
-
-/* ...existing code... */
-
-/* Make "Gaming centers" (details > summary) line up with other nav links */
 .nav-links a,
 .nav-links summary {
   display: inline-flex;
   align-items: center;
-  height: 20px; /* match logo / navbar height */
+  height: 20px;
 }
 
-/* Ensure summary/ details behave like a link */
 .nav-links .dropdown details {
   display: inline-block;
 }
@@ -1183,13 +1171,12 @@ body {
   color: #e0e0e0;
   font-size: 1.5rem;
   font-weight: 600;
-  background: transparent;
   border: none;
   margin: 0;
-  padding-left: 0.5rem; /* optional tweak if you want extra left spacing */
+  padding-left: 0.5rem;
 }
 
-/* Add a caret indicator and rotate when open */
+/* Arrow indicator. rotate when open */
 .nav-links .dropdown summary::after {
   content: "▾";
   font-size: 2rem;
@@ -1201,9 +1188,21 @@ body {
 .nav-links .dropdown details[open] summary::after {
   transform: rotate(0deg);
 }
+.nav-links .dropdown summary {
+  line-height: 1;
+}
 
-/* Mobile: make summary full-width, caret to right and natural height */
-@media (max-width: 900px) {
+/* NAVIGATION BAR ON SMALLER SCREENS. "Hamburger menu" */
+@media (max-width: 1024px) {
+  .nav-links .dropdown summary {
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    font-weight: 600;
+  }
+  .nav-links .dropdown .dropdown-menu a {
+    color: #ffd600;
+    font-size: 1rem;
+  }
   .nav-links a,
   .nav-links summary {
     height: auto;
@@ -1212,7 +1211,7 @@ body {
   }
   .nav-links .dropdown summary {
     width: 100%;
-    justify-content: space-between; /* label left, caret right */
+    justify-content: space-between;
     padding-right: 0.5rem;
   }
   .nav-links .dropdown details {
@@ -1226,7 +1225,8 @@ body {
     font-size: 1.2rem;
   }
 }
-@media (min-width: 901px) {
+
+@media (min-width: 1025px) {
   .nav-toggle {
     display: none;
   }
@@ -1235,53 +1235,420 @@ body {
   }
 }
 
-.nav-links .dropdown summary {
-  line-height: 1;
-}
-
 @media (max-width: 1024px) {
+  /* INDEX: Header section adjustments for laptops */
   .header_content {
-    padding-left: 35px;
+    padding-left: 70px;
+  }
+  /* About page: header adjustments for laptops. 1024px */
+  .about_header_content {
+    padding-left: 70px;
+  }
+  .about_header_content p {
+    max-width: 90%;
+  }
+  /*Contact page: header adjustments for laptops. 1024px */
+  .contact_header_content {
+    padding-left: 70px;
+  }
+  .contact_header_content p {
+    max-width: 90%;
+  }
+  /*Gaming centers: Stockholm page adjustments for laptops. 1024px */
+  .stockholm_contact_header_content {
+    padding-left: 70px;
+  }
+  .stockholm_contact_header_content p {
+    max-width: 90%;
+  }
+  .stockholm_location_info {
+    max-width: 95%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1.5rem;
   }
 
+  .stockholm_location_info .location-text {
+    flex: none;
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+  }
+
+  .stockholm_location_info h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .stockholm_location_info address {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
+  .stockholm_location_info .location-map {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stockholm_location_info .location-map iframe {
+    width: 100%;
+    height: 360px;
+    border-radius: 12px;
+  }
+  /*Stockholm, Gothenburg, Malmo page: Prices section adjustments for laptops*/
+  .prices {
+    width: 95%;
+    max-width: none;
+    box-sizing: border-box;
+    padding: 0 1rem 1rem 0;
+  }
+  .prices h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .prices p {
+    font-size: 1rem;
+    margin: 0 auto 3rem auto;
+  }
+
+  .pricing h2 {
+    font-size: 2rem;
+  }
+
+  .price_center-list-row {
+    gap: 3rem;
+  }
+
+  .price_center-block h3 {
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
+  }
+
+  .price_center-block p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .price_center-block {
+    border-radius: 18px;
+    padding: 1rem 0rem;
+    min-width: 200px;
+  }
+  /*Gaming centers: Gothenburg adjustments for laptops*/
+  .gothenburg_contact_header_content {
+    padding-left: 70px;
+  }
+  .gothenburg_contact_header_content p {
+    max-width: 90%;
+  }
+  /*Gaming centers: Malmo adjustments for laptops*/
+  .malmo_contact_header_content {
+    padding-left: 70px;
+  }
+  .malmo_contact_header_content p {
+    max-width: 90%;
+  }
+  /* INDEX: Store info section adjustments for laptops */
   .storeinfo-section {
-    flex-direction: column; /* reduce outer margin on small screens */
-    align-items: center; /* center children */
+    flex-direction: column;
+    align-items: center;
   }
 
   .storeinfo {
     order: 1;
-    text-align: center; /* optional: center text on small screens */
+    text-align: center;
     width: 100%;
   }
 
   .storeinfo-image {
     order: 2;
     width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .storeinfo-image img {
-    max-width: 90%; /* keep some horizontal padding on narrow screens */
+    max-width: 80%;
   }
 
   .storeinfo-section {
-    flex-direction: column;
-    align-items: center;
-    margin: 5.5rem 2rem; /* much smaller on phones/tablets */
+    margin: 5.5rem 2rem;
     gap: 3rem;
     padding: 0;
     max-height: 500px;
   }
+  .storeinfo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
 
   .storeinfo p {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  /* INDEX: Info icons section adjustments for tablets */
+  .infoicons {
+    gap: 2rem;
+    margin: 5rem 1rem;
+  }
+  .infoicons .service {
+    padding: 0.5rem 0;
+    max-width: 320px;
+  }
+  .service h2 {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.05;
+  }
+  .service img {
+    width: 110px;
+    height: auto;
+    margin: 0.4rem auto;
+  }
+  .service p {
+    font-size: 1rem;
+    max-width: 280px;
+    margin: 0.3rem auto 0;
+  }
+
+  /* INDEX: Gaming Centers div style for laptops */
+  .gamingcenters {
+    margin: 10rem auto 10rem auto;
+    max-width: 1024px;
+    padding: 1rem 2rem;
+  }
+
+  .gamingcenters h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #ffd600;
+    letter-spacing: 1px;
+  }
+
+  .gamingcenters p {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+  }
+
+  .center-list-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .center-block h3 {
+    margin-bottom: 0.7rem;
+    color: #ffd600;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .center-block p {
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+  }
+  .badge-new {
+    display: inline-block;
+    background: #ffd600;
+    color: #4e50cf;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin-top: -0.1rem;
+    margin-bottom: -0.7rem;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -6px;
   }
 }
 
-/* temp debug: outline immediate page sections so you can see which element creates the gap */
-body > {
-  outline: 2px dashed rgba(255, 255, 255, 0.06);
+@media (max-width: 768px) {
+  .logo img {
+    height: 50px;
+    cursor: pointer;
+    filter: drop-shadow(0 0px 10px #b700ff);
+  }
+  .nav-toggle {
+    position: absolute;
+    right: 2.5rem;
+  }
+  /* INDEX: Header section adjustments for tablets */
+  .header_content {
+    padding-left: 40px;
+  }
+  .header_content h1 {
+    font-size: 3rem;
+    max-width: 95%;
+  }
+  .btn {
+    font-size: 1rem;
+    margin-top: 5%;
+  }
+  .header_content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  /* About: Header adjustments for tablets */
+  .about_header_content {
+    padding-left: 40px;
+  }
+  .about_header_content h1 {
+    font-size: 3rem;
+    max-width: 95%;
+  }
+  .about_header_content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  /* Contact: Header adjustments for tablets */
+  .contact_header_content {
+    padding-left: 40px;
+  }
+  .contact_header_content h1 {
+    font-size: 3rem;
+    max-width: 95%;
+  }
+  .contact_header_content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .contact_header_content {
+    padding-left: 40px;
+  }
+  /*Gaming centers: Stockholm adjustments for tablets*/
+  .stockholm_contact_header_content {
+    padding-left: 40px;
+  }
+  .stockholm_contact_header_content h1 {
+    font-size: 3rem;
+    max-width: 95%;
+  }
+  .stockholm_contact_header_content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .stockholm_location_info {
+    margin: 3rem 1rem;
+    padding: 1rem;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 90%;
+    margin: 2.5rem auto;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .stockholm_location_info h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .stockholm_location_info .location-text {
+    text-align: center;
+  }
+
+  .stockholm_location_info address {
+    font-size: 1rem;
+  }
+
+  .stockholm_location_info .location-map iframe {
+    height: 260px;
+    max-width: 90%;
+  }
+  /*Gaming centers: Gothenburg adjustments for tablets*/
+  .gothenburg_contact_header_content {
+    padding-left: 40px;
+  }
+  .gothenburg_contact_header_content h1 {
+    font-size: 3rem;
+    max-width: 95%;
+  }
+  .gothenburg_contact_header_content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  /*Gaming centers: Malmo adjustments for tablets*/
+  .malmo_contact_header_content h1 {
+    font-size: 3rem;
+    max-width: 95%;
+  }
+  .malmo_contact_header_content p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+  .malmo_contact_header_content {
+    padding-left: 40px;
+  }
+  .infoicons {
+    gap: 2rem;
+    margin: 2rem;
+    margin-bottom: 5rem;
+  }
+  .gamingcenters {
+    margin: 2rem;
+    max-width: 600px;
+    text-align: center;
+    color: #fff;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+  }
+  .center-list-row {
+    gap: 5rem;
+  }
+  .storeinfo-image img {
+    max-width: 100%;
+  }
+  /* About page: FAQ styles adjustments for tablets */
+  .faq_info h2 {
+    color: #ffd600;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .faq_info h3 {
+    font-size: 1.2rem;
+  }
+  .faq_info p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 1.9rem;
+  }
+  .additional_info {
+    text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
+    max-width: 1000px;
+    width: 80%;
+  }
+  .additional_info h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Minor adjustments for smallest screens */
+@media (max-width: 480px) {
+  .logo img {
+    height: 50px;
+  }
+  .nav-toggle {
+    right: 2rem;
+  }
+}
+
+/* temp debug outline */
+body > * {
+  outline: 2px dashed rgba(255, 255, 255, 0.178);
 }
