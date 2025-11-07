@@ -1,8 +1,7 @@
 html {
   scroll-behavior: smooth;
-  --color-accent: #ffd600;
-  --color-muted: #b0b0b0;
-  --color-text: #e0e0e0;
+  --color-accent: #ffd600; /* Accent color for links and highlights */
+  --color-muted: #b0b0b0; /* Muted color for footer text */
 }
 
 body {
@@ -12,7 +11,6 @@ body {
   background: linear-gradient(135deg, #001f3f, #003366);
   margin: 0;
 }
-
 
 /* Navigation bar */
 .navbar {
@@ -638,19 +636,19 @@ body {
   transform: translateX(-50px);
   animation: slideIn 2s ease forwards;
   text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
+}
 .about_header_content p {
   font-size: 1.2rem;
   max-width: 700px;
   line-height: 1.5;
 }
-
 .about_header_content h1 {
   font-size: 4rem;
   margin: 0 0 1rem 0;
   font-weight: 900;
   font-style: italic;
 }
-}
+
 
 /* About page: FAQ styles */
 .faq_info {
