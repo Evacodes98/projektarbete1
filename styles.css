@@ -1,15 +1,18 @@
 html {
   scroll-behavior: smooth;
+  --color-accent: #ffd600;
+  --color-muted: #b0b0b0;
+  --color-text: #e0e0e0;
 }
+
 body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(135deg, #001f3f, #003366);
-  align-items: stretch;
   margin: 0;
 }
+
 
 /* Navigation bar */
 .navbar {
@@ -332,6 +335,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid transparent;
+  transition: border 0.25s;
 }
 
 .center-block h3 {
@@ -355,19 +360,6 @@ body {
   display: block;
   border-radius: 18px;
   transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
-}
-
-.center-block {
-  background: rgba(30, 10, 60, 0.7);
-  border-radius: 18px;
-  padding: 2rem 2.5rem;
-  min-width: 180px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid transparent;
-  transition: border 0.25s;
 }
 .badge-new {
   display: inline-block;
@@ -646,23 +638,18 @@ body {
   transform: translateX(-50px);
   animation: slideIn 2s ease forwards;
   text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
-}
 .about_header_content p {
   font-size: 1.2rem;
   max-width: 700px;
   line-height: 1.5;
 }
-@keyframes slideIn {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+
 .about_header_content h1 {
   font-size: 4rem;
   margin: 0 0 1rem 0;
   font-weight: 900;
   font-style: italic;
+}
 }
 
 /* About page: FAQ styles */
