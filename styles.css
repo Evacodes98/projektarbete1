@@ -144,9 +144,7 @@ body {
   pointer-events: none;
 }
 .header_content {
-  position: relative;
-  background: url("/images/friendsgaming.webp") center/cover no-repeat;
-  height: 700px;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,7 +153,21 @@ body {
   color: #ffffff;
   margin-bottom: 20px;
   padding-top: 100px;
+  position: relative;
+  overflow: hidden;
+  background: none;
 }
+
+.header_content .hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .header_content > * {
   position: relative;
   z-index: 2;
@@ -283,7 +295,7 @@ body {
 
 .storeinfo-image {
   flex: 1 1 900px;
-  text-align: center;
+  text-align: end;
 }
 
 .storeinfo-image img {
@@ -452,7 +464,7 @@ body {
 .contact_header_content {
   position: relative;
   background: url("/images/Cafe.webp") center/cover no-repeat;
-  height: 700px;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -612,7 +624,7 @@ body {
 .about_header_content {
   position: relative;
   background: url("/images/gamingseats.webp") center/cover no-repeat;
-  height: 700px;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -648,7 +660,6 @@ body {
   font-weight: 900;
   font-style: italic;
 }
-
 
 /* About page: FAQ styles */
 .faq_info {
@@ -726,7 +737,7 @@ body {
 .stockholm_contact_header_content {
   position: relative;
   background: url("/images/StockholmCafe.webp") center/cover no-repeat;
-  height: 700px;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -911,7 +922,7 @@ body {
 .gothenburg_contact_header_content {
   position: relative;
   background: url("/images/Gothenburgimg.webp") center/cover no-repeat;
-  height: 700px;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -960,7 +971,7 @@ body {
 .malmo_contact_header_content {
   position: relative;
   background: url("/images/Malmoimg.webp") center/cover no-repeat;
-  height: 700px;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1375,15 +1386,15 @@ body {
 
   /* INDEX: Info icons section adjustments for tablets */
   .infoicons {
-    gap: 2rem;
+    gap: 3rem;
     margin: 5rem 1rem;
   }
   .infoicons .service {
     padding: 0.5rem 0;
-    max-width: 320px;
+    max-width: 300px;
   }
   .service h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0.6rem;
     line-height: 1.05;
   }
@@ -1393,7 +1404,7 @@ body {
     margin: 0.4rem auto;
   }
   .service p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     max-width: 280px;
     margin: 0.3rem auto 0;
   }
@@ -1453,6 +1464,12 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     top: -6px;
+  }
+
+  .storeinfo-image img {
+    max-width: 80%;
+    display: flex;
+    margin: 0 auto;
   }
 }
 
