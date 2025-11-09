@@ -1,7 +1,7 @@
 html {
   scroll-behavior: smooth;
-  --color-accent: #ffd600; /* Accent color for links and highlights */
-  --color-muted: #b0b0b0; /* Muted color for footer text */
+  --color-accent: #ffd600;
+  --color-muted: #b0b0b0;
 }
 
 body {
@@ -144,7 +144,7 @@ body {
   pointer-events: none;
 }
 .header_content {
-  min-height: 60vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,6 +156,7 @@ body {
   position: relative;
   overflow: hidden;
   background: none;
+  
 }
 
 .header_content .hero-video {
@@ -220,6 +221,32 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 14px 20px rgba(0, 0, 0, 0.45);
 }
+
+/* INDEX: header video animation */
+.header_content .hero-video{
+  opacity: 0;
+  animation: heroFadeIn 2s ease forwards;
+  animation-delay: .3s;
+  will-change: opacity;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.header_content p,
+.header_content .btn {
+  animation: none !important;
+  opacity: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header_content .hero-video { animation: none; opacity: 1; }
+}
+
+@keyframes heroFadeIn { to { opacity: 1; } }
 
 /* Main content styles */
 .infoicons {
@@ -337,7 +364,7 @@ body {
 }
 
 .center-block {
-  background: rgba(30, 10, 60, 0.7);
+  background: #090040;
   border-radius: 18px;
   padding: 2rem 2.5rem;
   min-width: 180px;
@@ -347,6 +374,7 @@ body {
   align-items: center;
   border: 2px solid transparent;
   transition: border 0.25s;
+  border: #38196b 2px solid;
 }
 
 .center-block h3 {
@@ -393,6 +421,11 @@ body {
   border: 2px solid #ffd600;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
   transition: transform 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.center-block:hover{
+  background: #471396;
+
 }
 
 /* Footer styles */
@@ -464,7 +497,7 @@ body {
 .contact_header_content {
   position: relative;
   background: url("/images/Cafe.webp") center/cover no-repeat;
-  min-height: 60vh;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -624,7 +657,7 @@ body {
 .about_header_content {
   position: relative;
   background: url("/images/gamingseats.webp") center/cover no-repeat;
-  min-height: 60vh;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -737,7 +770,7 @@ body {
 .stockholm_contact_header_content {
   position: relative;
   background: url("/images/StockholmCafe.webp") center/cover no-repeat;
-  min-height: 60vh;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -777,6 +810,25 @@ body {
   margin: 6rem auto 10rem;
   padding: 2.5rem 1rem;
   box-sizing: border-box;
+}
+.stockholm_contact_header_content > * {
+  position: relative;
+  z-index: 2;
+}
+.stockholm_contact_header_content h1,
+.stockholm_contact_header_content button,
+.stockholm_contact_header_content p {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 2s ease forwards;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .stockholm_location_info .location-text {
@@ -922,7 +974,7 @@ body {
 .gothenburg_contact_header_content {
   position: relative;
   background: url("/images/Gothenburgimg.webp") center/cover no-repeat;
-  min-height: 60vh;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -951,6 +1003,24 @@ body {
   max-width: 700px;
   line-height: 1.5;
 }
+.gothenburg_contact_header_content > * {
+  position: relative;
+  z-index: 2;
+}
+.gothenburg_contact_header_content h1,
+.gothenburg_contact_header_content p {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 2s ease forwards;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* Malmo page: information styles */
 .malmo_contact_header_content::before {
   content: "";
@@ -971,7 +1041,7 @@ body {
 .malmo_contact_header_content {
   position: relative;
   background: url("/images/Malmoimg.webp") center/cover no-repeat;
-  min-height: 60vh;
+  min-height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -999,6 +1069,24 @@ body {
   font-size: 1.2rem;
   max-width: 700px;
   line-height: 1.5;
+}
+.malmo_contact_header_content > * {
+  position: relative;
+  z-index: 2;
+}
+.malmo_contact_header_content h1,
+.malmo_contact_header_content p {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 2s ease forwards;
+  text-shadow: rgba(0, 0, 0, 0.452) 2px 1px 0px;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* NAVIGATION BAR STYLES */
@@ -1648,4 +1736,22 @@ body {
   .nav-toggle {
     right: 2rem;
   }
+  .contact_header_content {
+  min-height: 500px;
+  }
+  .about_header_content {
+    min-height: 500px;
+  }
+  .stockholm_contact_header_content {
+    min-height: 500px;
+  }
+  .gothenburg_contact_header_content {
+    min-height: 500px;
+  }
+  .malmo_contact_header_content {
+    min-height: 500px;
+  }
+
 }
+
+
