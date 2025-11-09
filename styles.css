@@ -496,7 +496,7 @@ body {
 }
 .contact_header_content {
   position: relative;
-  background: url("/images/Cafe.webp") center/cover no-repeat;
+  background: url("images/Cafe.webp") center/cover no-repeat;
   min-height: 700px;
   display: flex;
   flex-direction: column;
@@ -656,7 +656,7 @@ body {
 }
 .about_header_content {
   position: relative;
-  background: url("/images/gamingseats.webp") center/cover no-repeat;
+  background: url("images/gamingseats.webp") center/cover no-repeat;
   min-height: 700px;
   display: flex;
   flex-direction: column;
@@ -769,7 +769,7 @@ body {
 }
 .stockholm_contact_header_content {
   position: relative;
-  background: url("/images/StockholmCafe.webp") center/cover no-repeat;
+  background: url("images/StockholmCafe.webp") center/cover no-repeat;
   min-height: 700px;
   display: flex;
   flex-direction: column;
@@ -973,7 +973,7 @@ body {
 /* Gothenburg page: information styles */
 .gothenburg_contact_header_content {
   position: relative;
-  background: url("/images/Gothenburgimg.webp") center/cover no-repeat;
+  background: url("images/Gothenburgimg.webp") center/cover no-repeat;
   min-height: 700px;
   display: flex;
   flex-direction: column;
@@ -1040,7 +1040,7 @@ body {
 
 .malmo_contact_header_content {
   position: relative;
-  background: url("/images/Malmoimg.webp") center/cover no-repeat;
+  background: url("images/Malmoimg.webp") center/cover no-repeat;
   min-height: 700px;
   display: flex;
   flex-direction: column;
